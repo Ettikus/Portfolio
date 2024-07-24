@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/90f3855614.js" crossorigin="anonymous"></script>
+    <style>
+        /* Styles for the contact form */
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form label {
+            margin: 10px 0 5px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #3498DB;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #2980B9;
+        }
+
+        /* Styles for contact information */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            color: #3498DB; /* WhatsApp link color */
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact</h1>
+    </header>
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me through the form below or via email.</p>
+            
+            <form action="https://formspree.io/f/movajwyl" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+
+            <h2>Contact Information</h2>
+            <p>You can also reach me at:</p>
+            <ul>
+                <li>Email: <a href="mailto:maraisettienne@gmail.com">maraisettienne@gmail.com</a></li>
+                <li>Phone: +27 67 614 0090</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/ettienne-marais-774791215/" target="_blank">Ettienne Marais</a></li>
+                <li>WhatsApp: <a href="https://wa.me/27676140090" target="_blank">Chat with me on WhatsApp</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <!-- Add your footer content here -->
+    </footer>
+</body>
+</html>

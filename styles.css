@@ -1,0 +1,257 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('https://res.cloudinary.com/dmclpbmk3/image/upload/v1721727280/rotate_uslgaq.jpg');   background-size: cover;
+    background-position: center;
+    background-color: #EDE8F5; /* Fallback background color */
+    color: #a6cbda; /* Text color */
+}
+
+header {
+    color: #1b0810;
+    padding: 10px;
+}
+
+header h1 {
+    margin: 0;
+    color: #ff0000; /* Fixed color format */
+}
+
+.container {
+    display: flex;
+}
+
+nav {
+    width: 60px;
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    color: #ff0000; /* Vibrant blue for links */
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s;
+    padding: 8px;
+    font-size: 0.9em;
+}
+
+nav ul li a:hover {
+    color: #fff; /* White text color on hover */
+    background-color: #2980B9; /* Darker blue background on hover */
+}
+
+.content {
+    flex: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Add spacing between paragraphs */
+.content p {
+    font-weight: bold; /* Makes the text bold */
+    font-family: 'Arial', sans-serif; /* Changes the font to Arial */
+    font-size: 16px; /* Optional: Adjusts the font size */
+    margin-bottom: 15px; /* Add spacing between paragraphs */
+}
+
+/* Styles for the picture box */
+.picture-box {
+    width: 80%; /* Set the width of the picture box */
+    max-width: 600px; /* Set a maximum width */
+    margin: 20px auto; /* Center the box and add vertical margins */
+    text-align: center; /* Center the image horizontally */
+    position: relative; /* Required for animation */
+    
+}
+
+.picture-box img {
+    max-width: 100%; /* Ensure the image fits within the container */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+/* Define the keyframes for the animation */
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(-20px); /* Start slightly to the left */
+    }
+    50% {
+        transform: translateX(20px); /* Move to the right */
+    }
+    100% {
+        transform: translateX(-20px); /* Move back to the left */
+    }
+}
+
+/* Define the keyframes for the pulsate animation */
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.cta {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3498DB; /* Vibrant blue button */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980B9; /* Darker blue button on hover */
+}
+
+.skills {
+    position: fixed; /* Fixed position */
+    top: 20px; /* 20px from the top */
+    right: 20px; /* 20px from the right */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    padding: 15px; /* Reduced padding */
+    border-radius: 5px;
+    z-index: 999; /* Ensure it's above other content */
+    width: 200px; /* Reduced width */
+    animation: pulsate 10s infinite; /* Apply the pulsate animation */
+}
+
+.skills h2 {
+    font-size: 1.5em; /* Reduced font size */
+    color: #fff;
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    margin-bottom: 10px; /* Reduced space between skill items */
+    font-size: 1em; /* Adjust font size */
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Stack skill icon and bar vertically */
+    align-items: flex-start; /* Align items to the start */
+}
+
+.skills li i {
+    margin-right: 10px;
+}
+
+/* Skill bar styles */
+.skill-bar {
+    width: 100%; /* Full width of the parent */
+    background-color: #444; /* Dark background color of the skill bar */
+    border: 2px solid #333; /* Darker and bolder border */
+    border-radius: 5px; /* Rounded corners */
+    height: 6px; /* Reduced height of the skill bar */
+    margin-top: 5px; /* Space above the skill bar */
+    position: relative; /* Position relative to allow absolute positioning of skill level */
+}
+
+.skill-level {
+    height: 100%; /* Full height of the skill bar */
+    background-color: #ff0000; /* Color of the filled part of the skill bar */
+    border-radius: 5px; /* Rounded corners */
+    position: absolute; /* Absolute position within the skill bar */
+    top: 0;
+    left: 0;
+}
+
+/* For screens smaller than 768px (tablets and below) */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+    }
+
+    nav ul li {
+        margin-bottom: 5px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .skills {
+        width: 100%; /* Full width on smaller screens */
+        position: relative; /* Relative position */
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .skills li {
+        margin: 0 5px 5px 5px;
+    }
+}
+
+/* For screens smaller than 480px (phones and below) */
+@media only screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul li a {
+        padding: 6px;
+    }
+
+    .btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .skills h2 {
+        font-size: 1.2em;
+    }
+
+    .skills li {
+        font-size: 0.9em; /* Adjust font size */
+        margin: 0 3px 3px 3px;
+    }
+}
